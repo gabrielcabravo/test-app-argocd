@@ -2,19 +2,20 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: test-app
-  namespace: default
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/gabrielbravo10/test-app-argocd.git
-    targetRevision: HEAD
-    path: kustomize
-    directory:
-      recurse: true
   destination:
-    server: https://kubernetes.default.svc
+    name: ''
     namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kustomize
+    repoURL: 'https://github.com/gabrielbravo10/test-app-argocd.git'
+    targetRevision: HEAD
+     directory:
+      recurse: true
   syncPolicy:
     automated:
       prune: false
       selfHeal: false
+  project: default
+
