@@ -11,8 +11,8 @@ spec:
     path: kustomize
     repoURL: 'https://github.com/gabrielbravo10/test-app-argocd.git'
     targetRevision: HEAD
-     directory:
-      recurse: true
+    directory:
+       recurse: true
   syncPolicy:
     automated:
       prune: false
