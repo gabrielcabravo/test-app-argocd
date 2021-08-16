@@ -3,5 +3,5 @@ kind: Deployment
 metadata:
   name: test-app
 spec:
-  replicas: 3
+  replicas: 2
     
