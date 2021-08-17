@@ -5,7 +5,6 @@ resources:
 - test-app-svc.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-patches:
-  - ./replica_count.yaml
 patchesStrategicMerge:
   - env.yaml
+  - replica_count.yaml
